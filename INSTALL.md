@@ -5,7 +5,10 @@ conda create -n snake python=3.7
 conda activate snake
 
 # install torch 1.1 built from cuda 9.0
-pip install torch==1.1.0 -f https://download.pytorch.org/whl/cu90/stable
+# pip install torch==1.1.0 -f https://download.pytorch.org/whl/cu90/stable
+
+pip install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f https://download.pytorch.org/whl/torch_stable.html
+
 
 pip install Cython==0.28.2
 pip install -r requirements.txt

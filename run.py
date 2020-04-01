@@ -1,6 +1,8 @@
 from lib.config import cfg, args
 import numpy as np
 import os
+import pdb
+import warnings
 
 
 def run_dataset():
@@ -76,13 +78,17 @@ def run_visualize():
 
     data_loader = make_data_loader(cfg, is_train=False)
     visualizer = make_visualizer(cfg)
+    index = 0
     for batch in tqdm.tqdm(data_loader):
         for k in batch:
             if k != 'meta':
                 batch[k] = batch[k].cuda()
         with torch.no_grad():
             output = network(batch['inp'], batch)
-        visualizer.visualize(output, batch)
+        # pdb.set_trace()
+        visualizer.visualize(output, batch, index)
+
+        index = index + 1
 
 
 def run_sbd():
@@ -96,4 +102,5 @@ def run_demo():
 
 
 if __name__ == '__main__':
+    warnings.filterwarnings('ignore')
     globals()['run_'+args.type]()

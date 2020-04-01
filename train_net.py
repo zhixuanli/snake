@@ -5,6 +5,7 @@ from lib.datasets import make_data_loader
 from lib.utils.net_utils import load_model, save_model, load_network
 from lib.evaluators import make_evaluator
 import torch.multiprocessing
+import warnings
 
 
 def train(cfg, network):
@@ -51,4 +52,5 @@ def main():
 
 
 if __name__ == "__main__":
+    warnings.filterwarnings('ignore')
     main()
