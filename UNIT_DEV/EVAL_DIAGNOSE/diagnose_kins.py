@@ -247,8 +247,6 @@ def run_evaluate():
     evaluator.summarize()
 
 
-
-
 if __name__ == '__main__':
     "python run.py --type evaluate test.dataset $dataset_name resume True model $model_name task $task"
 
