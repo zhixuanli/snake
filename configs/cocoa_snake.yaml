@@ -1,0 +1,23 @@
+model: 'cocoa'
+network: 'ro_34'
+task: 'snake'
+resume: false
+gpus: ([2])
+
+train:
+    optim: 'adam'
+    lr: 1e-4
+    milestones: (80, 120)
+    gamma: 0.25
+    batch_size: 12
+    dataset: 'cocoa_train'
+    num_workers: 4
+    epoch: 150
+    scheduler: 'manual'
+    gammas: [0.5, 0.1]
+test:
+    dataset: 'cocoa_test'
+    batch_size: 1
+
+heads: {'ct_hm': 7, 'wh': 2}
+segm_or_bbox: 'segm'

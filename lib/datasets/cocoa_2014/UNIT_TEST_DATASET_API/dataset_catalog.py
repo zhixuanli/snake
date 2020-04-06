@@ -1,4 +1,3 @@
-from lib.config import cfg
 
 
 class DatasetCatalog(object):
@@ -108,13 +107,13 @@ class DatasetCatalog(object):
         'cocoa_train': {
                        'id': 'coco_amodal_2014',
                        'data_root': dataset_root + 'COCO_amodal_2014/image/train',
-                       'ann_file': dataset_root + 'annotations/COCO_amodal_train2014.json',
-                       'split': 'train'
+                       'ann_file': dataset_root + 'COCO_amodal_2014/annotations/COCOA_train.json',
+                       'split': 'mini'
         },
         'cocoa_test': {
             'id': 'coco_amodal_2014',
             'data_root': dataset_root + 'COCO_amodal_2014/image/test',
-            'ann_file': dataset_root + 'annotations/COCO_amodal_val2014.json',
+            'ann_file': dataset_root + 'annotations/COCOA_val.json',
             'split': 'val'
         },
     }
