@@ -1,9 +1,9 @@
-from lib.config import cfg
 
 
 class DatasetCatalog(object):
 
-    dataset_root = "/Users/lizhixuan/PycharmProjects/amodal_dataset/"
+    # dataset_root = "/Users/lizhixuan/PycharmProjects/amodal_dataset/"
+    dataset_root = "/datasets/lzx/amodal/"
     dataset_attrs = {
         'CocoTrain': {
             'id': 'coco',
@@ -89,33 +89,57 @@ class DatasetCatalog(object):
         },
         'KinsTrain': {
             'id': 'kins',
-            'data_root': 'data/kitti/training/image_2',
-            'ann_file': 'data/kitti/training/instances_train.json',
+            'data_root': dataset_root + 'KINS/images/train',
+            'ann_file': dataset_root + 'KINS/annotations/KINS_train.json',
             'split': 'train'
         },
         'KinsVal': {
             'id': 'kins',
-            'data_root': 'data/kitti/testing/image_2',
-            'ann_file': 'data/kitti/testing/instances_val.json',
+            'data_root': dataset_root + 'KINS/images/test',
+            'ann_file': dataset_root + 'KINS/annotations/KINS_val.json',
             'split': 'val'
         },
         'KinsMini': {
             'id': 'kins',
-            'data_root': 'data/kitti/testing/image_2',
-            'ann_file': 'data/kitti/testing/instances_val.json',
+            'data_root': dataset_root + 'KINS/images/test',
+            'ann_file': dataset_root + 'KINS/annotations/KINS_val.json',
             'split': 'mini'
         },
         'cocoa_train': {
-                       'id': 'coco_amodal_2014',
-                       'data_root': dataset_root + 'COCO_amodal_2014/image/train',
-                       'ann_file': dataset_root + 'annotations/COCO_amodal_train2014.json',
-                       'split': 'train'
+            'id': 'cocoa',
+            'data_root': dataset_root + 'COCOA/images/train',
+            'ann_file': dataset_root + 'COCOA/annotations/COCOA_train.json',
+            'split': 'train'
         },
         'cocoa_test': {
-            'id': 'coco_amodal_2014',
-            'data_root': dataset_root + 'COCO_amodal_2014/image/test',
-            'ann_file': dataset_root + 'annotations/COCO_amodal_val2014.json',
+            'id': 'cocoa',
+            'data_root': dataset_root + 'COCOA/images/val',
+            'ann_file': dataset_root + 'COCOA/annotations/COCOA_val.json',
             'split': 'val'
+        },
+        'BSDSA_train': {
+            'id': 'BSDSA',
+            'data_root': dataset_root + 'BSDSA/images/train',
+            'ann_file': dataset_root + 'BSDSA/annotations/BSDSA_train.json',
+            'split': 'train'
+        },
+        'BSDSA_val': {
+            'id': 'BSDSA',
+            'data_root': dataset_root + 'BSDSA/images/val',
+            'ann_file': dataset_root + 'BSDSA/annotations/BSDSA_val.json',
+            'split': 'val'
+        },
+        'BSDSA_test': {
+            'id': 'BSDSA',
+            'data_root': dataset_root + 'BSDSA/images/test',
+            'ann_file': dataset_root + 'BSDSA/annotations/BSDSA_test.json',
+            'split': 'test'
+        },
+        'BSDSA_trainval': {
+            'id': 'BSDSA',
+            'data_root': dataset_root + 'BSDSA/images/trainval',
+            'ann_file': dataset_root + 'BSDSA/annotations/BSDSA_trainval.json',
+            'split': 'trainval'
         },
     }
 

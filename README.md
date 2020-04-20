@@ -131,6 +131,12 @@ python train_net.py --cfg_file configs/kins_snake.yaml model kins_snake
 python train_net.py --cfg_file configs/sbd_snake.yaml model sbd_snake
 ```
 
+### Training on COCOA
+
+```
+python train_net.py --cfg_file configs/cocoa_snake.yaml model cocoa_snake
+```
+
 ### Tensorboard
 
 We provide tensorboard for seeing the training status:
